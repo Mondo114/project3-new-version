@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./components/Login/Login.js";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import News from "./components/News";
 
 const App = () => (
   <Router>
