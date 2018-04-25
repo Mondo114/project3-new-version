@@ -9,9 +9,7 @@ const Stock = () => (
               <h2 class="panel-title">Stocks</h2>
             </div>
             <div class="panel-body">
-              <stocks className="stocks">
-                <span>stocks</span>
-              </stocks>
+              <p>$$$$</p>
             </div>
           </div>
         

@@ -10,20 +10,22 @@ import Weather from "./../Weather";
 import Youtube from "./../Youtube";
 import { Draggable, Droppable } from 'react-drag-and-drop'
  
-class App extends React.Component {
+class Wrapper extends React.Component {
     render() { 
         return(
-        <div>
-            <ul>
-                <Draggable type="widget" data="sports"><li><Sports/></li></Draggable>
-                <Draggable type="widget" data="stock"><li><Stock/></li></Draggable>
-                <Draggable type="widget" data="weather"><li><Weather/></li></Draggable>
-            </ul>
-            <Droppable>
+        <div class= "wrapper">
+            <div class= "col-lg-12">
+            
+                <Draggable class="col-md-4" type="widget" data="sports"><Sports/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="stock"><Stock/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
+            
+            <Droppable
                 types={['widget']}  
-                onDrop={this.onDrop.bind(this)}
-                <ul className="uiBox"></ul>
+                onDrop={this.onDrop.bind(this)}>
+                <ul className="col-md-4"></ul>
             </Droppable>
+            </div>
         </div>
     )}
     onDrop(data) {
@@ -35,6 +37,6 @@ class App extends React.Component {
 
 
 
-const Wrapper = props => <main className="wrapper" {...props} />;
+// const Wrapper = props => <main className="wrapper" {...props} />;
 
 export default Wrapper;

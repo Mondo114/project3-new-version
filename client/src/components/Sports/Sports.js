@@ -9,9 +9,7 @@ const Sports = () => (
               <h2 class="panel-title">SPORTS</h2>
             </div>
             <div class="panel-body">
-              <sports className="sports">
-                <span>Sports</span>
-              </sports>
+              <p>Go Team!</p>
             </div>
           </div>
         
