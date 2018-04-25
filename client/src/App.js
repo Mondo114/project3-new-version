@@ -7,17 +7,18 @@ import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 
 const App = () => (
-  <Router>
+  // <Router>
     <div>
-     
-      <Wrapper>
+      <Header />
+      <Wrapper />
+      <Login />
    
-        <Route exact path="/" component={Login} />
+        {/* <Route exact path="/" component={Login} />
 
-      </Wrapper>
+      </Wrapper> */}
     
     </div>
-  </Router>
+  // {/* </Router> */}
 );
 
 export default App;
