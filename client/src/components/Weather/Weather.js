@@ -9,7 +9,7 @@ const Weather = () => (
 
 const API_KEY = "001ab0b7efc2baeae3d7cdf13d00c7e8";
 
-class Weather extends React.Component {
+class weather extends React.Component {
   getWeather = async (e) => {
     e.preventDefault();
     const api_call = await fetch("api.openweathermap.org/data/2.5/weather?q={city name}&appid=${API_KEY}");

@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Login from "./components/Login/Login.js";
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
+import Weather from "./components/Weather";
 
 const App = () => (
   <Router>
@@ -13,6 +14,11 @@ const App = () => (
       <Wrapper>
    
         <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Weather} />
+       
+        <Route exact path="/" component={Header} />
+       
+       
 
       </Wrapper>
     
