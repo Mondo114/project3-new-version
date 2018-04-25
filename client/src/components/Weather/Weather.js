@@ -7,40 +7,64 @@ import './Weather.css';
 
 
 
-const API_KEY = "001ab0b7efc2baeae3d7cdf13d00c7e8";
+//const API_URL = "api.openweathermap.org/data/2.5/weather?q={city name}&appid=${API_KEY}"
+//const API_KEY = "001ab0b7efc2baeae3d7cdf13d00c7e8";
 
-class weather extends React.Component {
-  getWeather = async (e) => {
-    e.preventDefault();
-    const api_call = await fetch("api.openweathermap.org/data/2.5/weather?q={city name}&appid=${API_KEY}");
-    //const data = await api_call.json();
-    console.log(api_call);
-  }
-  render() {
-    return (
-      <weather className="weather">
-      <span>Weather</span>
-    </weather>
-    );
+ class Weather extends React.Component {
+  state = {
+    weather: []
   }
 
-};  
+  componentDidMount() {
+    console.log("componentDidMount")
+    axios.get("https://api.openweathermap.org/data/2.5/weather?q=Los+Angeles&units=imperial&appid=001ab0b7efc2baeae3d7cdf13d00c7e8")
+    .then(res => {
+      const icon = res.data.weather[0].icon;
+      const description = res.data.weather[0].description;
+      const main = res.data.weather[0].main;
+      const temp = res.data.main.temp;
+      const humidity = res.data.main.humidity;
+      
+      
+      this.setState({ 
+        main: res.data.weather[0].main,
+        icon: res.data.weather[0].icon,
+        description: res.data.weather[0].description,
+        temp: res.data.main.temp,
+        humidity: res.data.main.humidity,
+      });
+      console.log(temp);
+      
+      
+    })
+  }
 
 
-const Weather = () => (
-  <div class="col-sm-4">
+
+render() {
+  return (
+    <div class="col-sm-4">
         
           <div class="panel panel-default">
             <div class="panel-heading">
               <h2 class="panel-title">WEATHER</h2>
             </div>
             <div class="panel-body">
-            <p>Cold!</p>
+            <p>{this.state.temp}</p>
+            <p>{this.state.main}</p>
+            <p>{this.state.humidity}</p>
+            <p>{this.state.icon}</p>
+            <p>{this.state.description}</p>
             </div>
           </div>
         
       </div>
-);
+  );
+}
+ }
+
+  
+
 
 
 
