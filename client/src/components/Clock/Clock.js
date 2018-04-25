@@ -2,9 +2,9 @@ import React from "react";
 import "./Clock.css";
 
 const Clock = () => (
-  <clock className="clock">
+  <div className="clock">
     <span>Clock</span>
-  </clock>
+  </div>
 );
 
 export default Clock;
