@@ -14,6 +14,7 @@ const App = () => (
       <Header />
       <Wrapper />
       <Login />
+      <News />
    
         {/* <Route exact path="/" component={Login} />
 

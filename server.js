@@ -13,8 +13,12 @@ app.post('/login', function(req, res){
   console.log(req)
   res.end();
 })
-// Send every request to the React app
-// Define any API routes before this runs
+
+app.get("/api/nyt", function(req, res) {
+  console.log("hello"); //get your articles
+  res.send("data is back from backend") //send that to front end
+});
+
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

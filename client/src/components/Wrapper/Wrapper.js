@@ -35,6 +35,5 @@ class App extends React.Component {
 
 
 
-const Wrapper = props => <main className="wrapper" {...props} />;
 
 export default Wrapper;
