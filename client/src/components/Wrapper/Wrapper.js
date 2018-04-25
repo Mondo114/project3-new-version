@@ -19,6 +19,7 @@ class Wrapper extends React.Component {
                 <Draggable class="col-md-4" type="widget" data="sports"><Sports/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="stock"><Stock/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="news"><News/></Draggable>
             
             <Droppable
                 types={['widget']}  
