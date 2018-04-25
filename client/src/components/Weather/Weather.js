@@ -50,9 +50,9 @@ render() {
               <h2 class="panel-title">WEATHER</h2>
             </div>
             <div class="panel-body">
-            <p>{this.state.temp}</p>
-            <p>{this.state.main}</p>
-            <p>{this.state.humidity}</p>
+            <p>Current Weather: {this.state.main}</p>
+            <p>Temperature: {this.state.temp}</p>
+            <p>Humidity: {this.state.humidity}</p>
             <p>{this.state.icon}</p>
             <p>{this.state.description}</p>
             </div>
