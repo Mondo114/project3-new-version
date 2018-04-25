@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
+import axios from 'axios';
 
 class Login extends Component {
   state = {
     email: "",
-    name: "",
     password: ""
   };
   validateForm() {
@@ -21,6 +21,14 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log(this.state)
+    axios.post('/login', this.state)
+    .then(function(response){
+        console.log("done")
+    })
+    .catch(function(err){
+        console.log(err)
+    })
 
   };
   render() {
