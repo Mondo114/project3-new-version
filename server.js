@@ -34,7 +34,7 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.post("/login", function (req, res) {
+app.post("/Signup", function (req, res) {
   var token = "t " + Math.random();
 
   if (req.file) {
@@ -42,6 +42,7 @@ app.post("/login", function (req, res) {
   }
   db.User.create({
       email: req.body.email,
+      name: req.body.name,
       password: req.body.password,
       token: token
   })

@@ -3,9 +3,10 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import axios from 'axios';
 
-class Login extends Component {
+class Signup extends Component {
   state = {
     email: "",
+    name: "",
     password: ""
   };
   validateForm() {
@@ -24,7 +25,7 @@ class Login extends Component {
     // this.props.changeLoginState() // run this line when you authenticate user
     event.preventDefault();
     // console.log(this.state)
-    axios.post('/login', this.state)
+    axios.post('/Signup', this.state)
     .then((response) => {
         console.log("res", response)
         if (response.status === 200){
@@ -39,7 +40,7 @@ class Login extends Component {
   };
   render() {
     return (
-      <div className="Login">
+      <div className="Signup">
         <form onSubmit={this.handleFormSubmit}>
           <FormGroup controlId="email" bsSize="large">
             <ControlLabel>Email</ControlLabel>
@@ -47,6 +48,15 @@ class Login extends Component {
               autoFocus
               type="email"
               value={this.state.email}
+              onChange={this.handleInputChange}
+            />
+          </FormGroup>
+          <FormGroup controlId="name" bsSize="large">
+            <ControlLabel>Name</ControlLabel>
+            <FormControl
+              autoFocus
+              type="name"
+              value={this.state.name}
               onChange={this.handleInputChange}
             />
           </FormGroup>
@@ -64,7 +74,7 @@ class Login extends Component {
             disabled={!this.validateForm()}
             type="submit"
           >
-            Login
+            Sign Up
           </Button>
         </form>
       </div>
@@ -72,4 +82,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default Signup;
