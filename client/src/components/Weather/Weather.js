@@ -2,7 +2,11 @@
 import React from 'react';
 import axios from 'axios';
 import './Weather.css';
+<<<<<<< HEAD
 // import Forecast from 'react-forecast';
+=======
+//import Forecast from 'react-forecast';
+>>>>>>> loginDatabase-3
 
 
 
@@ -68,6 +72,12 @@ render() {
 
 
 
+<<<<<<< HEAD
+=======
+  //const Weather = props => (
+   // <Forecast latitude={props.lat} longitude={props.long} name={props.name} />
+ // );
+>>>>>>> loginDatabase-3
 
 
 export default Weather;
