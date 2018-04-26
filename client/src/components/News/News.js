@@ -51,18 +51,21 @@ componentDidMount() {
     console.log("this.state.articles: " + this.state.articles);
     return (
       <div class="card">
-      <div class="card-header">
-        <h2>News</h2>
-      </div>
-      <div class="card-body">
-        <ul class="list-group list-group-flush">
+        <div class="card-header">
+          <h2>News</h2>
+        </div>
+        
+        <div class="card-body">
+        
           
         {this.state.articles.map((article, index) => {
          if (index < 10) {
           return (
             <div>
+              
               <p>{article.source.name}</p>
-              <a target="_blank" href={article.url}>{article.title}</a>
+              <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
+              
               <br/>
               <br/>
             </div>
@@ -70,7 +73,7 @@ componentDidMount() {
           ) 
         }
       })}
-      </ul>
+      
       </div>
     </div>  
         
