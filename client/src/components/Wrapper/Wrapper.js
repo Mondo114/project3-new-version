@@ -21,9 +21,9 @@ class Wrapper extends React.Component {
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
             
             <Droppable
-                types={['widget']}  
+                types={["widget"]}  
                 onDrop={this.onDrop.bind(this)}>
-                <ul className="col-md-4"></ul>
+                <div className="col-md-4"></div>
             </Droppable>
             </div>
         </div>

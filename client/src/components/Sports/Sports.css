@@ -1,14 +1,30 @@
-.sports {
-  min-height: 100px;
+.card {
+  min-height: 300px;
   background: #E5E5E5;
   position: relative;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.card-header {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: purple;
 }
 
-.sports span {
+.card-body {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 3px;
   background: #B8B8B8;
+}
+
+.first {
+  background: palegreen;
+}
+.second {
+  background: greenyellow;
+}
+
+.third {
+  background: green;
 }

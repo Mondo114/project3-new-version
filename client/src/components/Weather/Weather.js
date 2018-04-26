@@ -28,7 +28,7 @@ class weather extends React.Component {
 
 
 const Weather = () => (
-  <div class="col-sm-4">
+  <div class="container">
         
           <div class="panel panel-default">
             <div class="panel-heading">

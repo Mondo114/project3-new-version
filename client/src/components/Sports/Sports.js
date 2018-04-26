@@ -2,18 +2,18 @@ import React from "react";
 import "./Sports.css";
 
 const Sports = () => (
-      <div class="col-sm-4">
-        
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">SPORTS</h2>
-            </div>
-            <div class="panel-body">
-              <p>Go Team!</p>
-            </div>
-          </div>
-        
-      </div>
+  <div class="card">
+    <div class="card-header">
+      <h2>Sports</h2>
+    </div>
+    <div class="card-body">
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item first"><a href="#" class="card-link">Eagles News</a></li>
+      <li class="list-group-item second"><a href="#" class="card-link">Scores</a></li>
+      <li class="list-group-item third"><a href="#" class="card-link">Oregon Duck Football</a></li>
+    </ul>
+  </div>
 
 );
 
