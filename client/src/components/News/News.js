@@ -29,26 +29,28 @@ componentDidMount() {
   render() {
     console.log("this.state.articles: " + this.state.articles);
     return (
-  <div class="col-sm-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2 class="panel-title">News</h2>
+      <div class="card">
+      <div class="card-header">
+        <h2>News</h2>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          
         {this.state.articles.map((article, index) => {
          if (index < 5) {
           return (
             <div>
-            <a target="_blank" href={article.url}>{article.title}</a>
+              <li class="list-group-item first"><a target="_blank" href={article.url}>{article.title}</a></li>
             </div>
 
           ) 
         }
       })}
+      </ul>
       </div>
     </div>  
         
-  </div>
+  
 
 
   )}

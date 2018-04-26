@@ -43,13 +43,13 @@ import './Weather.css';
 
 render() {
   return (
-    <div class="col-sm-4">
-        
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">WEATHER</h2>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>Weather</h2>
             </div>
-            <div class="panel-body">
+
+            <div class="card-body">
             <p>Current Weather: {this.state.main}</p>
             <p>Temperature: {this.state.temp}</p>
             <p>Humidity: {this.state.humidity}</p>
@@ -58,19 +58,11 @@ render() {
             </div>
           </div>
         
-      </div>
+      
   );
 }
  }
 
-  
-
-
-
-
-  //const Weather = props => (
-   // <Forecast latitude={props.lat} longitude={props.long} name={props.name} />
- // );
 
 
 export default Weather;

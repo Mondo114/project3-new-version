@@ -4,23 +4,59 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Login from "./components/Login/Login.js";
 import Wrapper from "./components/Wrapper";
-import Footer from "./components/Footer";
-import News from "./components/News";
+// import Footer from "./components/Footer";
+import ReactDOM from 'react-dom';
 
 
-const App = () => (
-  // <Router>
-    <div>
-      <Header />
-      <Wrapper />
-      <Login />
-   
-        {/* <Route exact path="/" component={Login} />
 
-      </Wrapper> */}
+class App extends Component {
+
+state = { 
+  isLoggedIn : true
+}
+
+changeLoginState(){
+  console.log("state changed", this.state)
+  this.setState({
+    isLoggedIn: true
+  })
+  console.log("state changed", this.state)
+}
+
+
+UserGreeting(props) {
+  return <Wrapper />;
+};
+
+GuestGreeting(props) {
+  return <Login changeLoginState={this.changeLoginState}/>;
+};
+
+Greeting(props) {
+  if (props) {
+  return this.UserGreeting()
+  }
+  else {
+  return this.GuestGreeting()
+  }
+};
+
+  render() {
+    console.log(this.state)
+    return (
+      <div>
+        <Header />
+        <div id="meat">
+          {this.Greeting(this.state.isLoggedIn)}
+        </div>
+        {/* <Footer /> */}
     
-    </div>
-  // {/* </Router> */}
-);
+          
+      
+      </div>
+    )
+  }
+};
+
 
 export default App;
