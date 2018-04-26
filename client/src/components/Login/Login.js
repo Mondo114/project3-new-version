@@ -21,17 +21,20 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     console.log(this.props)
-    this.props.changeLoginState()
+    // this.props.changeLoginState() // run this line when you authenticate user
     event.preventDefault();
-    console.log(this.state)
-    // axios.post('/login', this.state)
-    // .then(function(response){
-    //     console.log(response)
+    // console.log(this.state)
+    axios.post('/login', this.state)
+    .then((response) => {
+        console.log("res", response)
+        if (response.status === 200){
+          this.props.changeLoginState()
+        }
        
-    // })
-    // .catch(function(err){
-    //     console.log(err)
-    // })
+    })
+    .catch(function(err){
+        console.log(err)
+    })
 
   };
   render() {
