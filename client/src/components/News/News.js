@@ -42,7 +42,8 @@ componentDidMount() {
     var newArray = JSON.parse(newString);
     console.log(newArray)
     this.setState({
-      articles: newArray
+      articles: newArray,
+      sourceName: newArray[0].source.name
     })}
   )
 }
@@ -57,19 +58,16 @@ componentDidMount() {
         
         <div class="card-body">
         
-          
+        <p>{this.state.sourceName}</p>
+
         {this.state.articles.map((article, index) => {
          if (index < 10) {
           return (
             <div>
-              
-              <p>{article.source.name}</p>
               <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
-              
               <br/>
               <br/>
             </div>
-
           ) 
         }
       })}
