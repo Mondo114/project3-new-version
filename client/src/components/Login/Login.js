@@ -20,15 +20,18 @@ class Login extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log(this.props)
+    this.props.changeLoginState()
     event.preventDefault();
     console.log(this.state)
-    axios.post('/login', this.state)
-    .then(function(response){
-        console.log(response)
-    })
-    .catch(function(err){
-        console.log(err)
-    })
+    // axios.post('/login', this.state)
+    // .then(function(response){
+    //     console.log(response)
+       
+    // })
+    // .catch(function(err){
+    //     console.log(err)
+    // })
 
   };
   render() {
