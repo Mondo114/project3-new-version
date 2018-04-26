@@ -1,10 +1,13 @@
-.weather {
+.container {
   min-height: 100px;
   background: #E5E5E5;
   position: relative;
 }
+.panel-heading {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
 
-.weather span {
+.panel-body {
   position: absolute;
   bottom: 0;
   left: 0;
