@@ -9,8 +9,29 @@ class News extends React.Component {
 state = {
   articles: [],
   source: "abc-news"
-
 }
+
+/* News API Sources
+abc-news
+bbc-news
+business-insider
+buzzfeed
+cbc-news
+cbs-news
+cnbc
+cnn
+crypto-coins-news
+msnbc
+nbc-news
+the-huffington-post
+the-new-york-times
+the-telegraph
+the-wall-street-journal
+the-washington-post
+the-washington-times
+time
+usa-today
+*/
 
 componentDidMount() {
   axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.state.source}&apiKey=${APIKEY}`)
@@ -36,10 +57,13 @@ componentDidMount() {
       </div>
       <div class="panel-body">
         {this.state.articles.map((article, index) => {
-         if (index < 5) {
+         if (index < 10) {
           return (
             <div>
-            <a target="_blank" href={article.url}>{article.title}</a>
+              <p>{article.source.name}</p>
+              <a target="_blank" href={article.url}>{article.title}</a>
+              <br/>
+              <br/>
             </div>
 
           ) 
