@@ -2,7 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 import './Weather.css';
-import Forecast from 'react-forecast';
+//import Forecast from 'react-forecast';
 
 const Weather = () => (
   <div class="col-sm-4">
@@ -24,9 +24,9 @@ const Weather = () => (
 
 
 
-  const Weather = props => (
-    <Forecast latitude={props.lat} longitude={props.long} name={props.name} />
-  );
+  //const Weather = props => (
+   // <Forecast latitude={props.lat} longitude={props.long} name={props.name} />
+ // );
 
 
 export default Weather;

@@ -24,7 +24,7 @@ class Login extends Component {
     console.log(this.state)
     axios.post('/login', this.state)
     .then(function(response){
-        console.log("done")
+        console.log(response)
     })
     .catch(function(err){
         console.log(err)
