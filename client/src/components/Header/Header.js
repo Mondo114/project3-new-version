@@ -1,49 +1,66 @@
 import React from "react";
 import "./Header.css";
 
-const Header = () => (
+const Header = (props) => (
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    
-    <a class="navbar-brand" href="#">#LogoHere</a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav mr-auto">
-
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              News
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">abc-news</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Customize<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          News
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onClick={()=> props.changeNews("abc-news")}>ABC News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("bbc-news")}>BBC News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("business-insider")}>Business Insider</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("buzzfeed")}>Buzzfeed</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("cbc-news")}>CBC News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("cbs-news")}>CBS News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("cnbc")}>CNBC</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("cnn")}>CNN</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("fox-news")}>Fox News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("msnbc")}>MSNBC</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("nbc-news")}>NBC News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("newsweek")}>Newsweek</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("politico")}>Politico</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-huffington-post")}>The Huffington Post</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-new-york-times")}>The New York Times</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-telegraph")}>The Telegraph</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-wall-street-journal")}>The Wall Street Journal</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-washington-post")}>The Washington Post</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-washington-times")}>The Washington Times</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("time")}>Time</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("usa-today")}>USA Today</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sports News
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onClick={()=> props.changeNews("bbc-sport")}>BBC Sports</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("espn")}>ESPN</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("fox-sports")}>Fox Sports</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("nfl-news")}>NFL News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("nhl-news")}>NHL News</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("talksport")}>TalkSport</a>
+          <a class="dropdown-item" onClick={()=> props.changeNews("the-sport-bible")}>SportBible</a>
+        </div>
+      </li>
+    </ul>
+    {/* <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> */}
+  </div>
 </nav>
 );
 

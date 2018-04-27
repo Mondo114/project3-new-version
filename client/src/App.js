@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Signup from "./components/Login/Login.js";
 import Wrapper from "./components/Wrapper";
+import Footer from "./components/Footer";
 // import Footer from "./components/Footer";
 import ReactDOM from 'react-dom';
 
@@ -12,7 +13,8 @@ import ReactDOM from 'react-dom';
 class App extends Component {
 
 state = { 
-  isLoggedIn : false
+  isLoggedIn: false,
+  newsChoice: ""
 }
 
 changeLoginState = () => {
@@ -20,11 +22,6 @@ changeLoginState = () => {
     isLoggedIn: true
   })
 }
-
-
-UserGreeting(props) {
-  return <Wrapper />;
-};
 
 GuestGreeting(props) {
   return <Signup changeLoginState={this.changeLoginState}/>;
@@ -39,21 +36,27 @@ Greeting(props) {
   }
 };
 
+changeNews = news => {
+  this.setState({
+    newsChoice: news
+  })
+}
+
   render() {
     console.log(this.state)
     return (
       <div>
-        <Header />
+        <Header changeNews={this.changeNews}/>
         <div id="meat">
           {this.Greeting(this.state.isLoggedIn)}
         </div>
-        {/* <Footer /> */}
-    
-          
-      
+        <Footer />
       </div>
     )
   }
+  UserGreeting(props) {
+    return <Wrapper newsChoice={this.state.newsChoice}/>;
+  };
 };
 
 
