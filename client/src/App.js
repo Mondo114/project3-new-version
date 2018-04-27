@@ -12,6 +12,14 @@ import ReactDOM from 'react-dom';
 
 
 class App extends Component {
+  // constructor() {
+  //   super();
+  //   var currentUser;
+  //    if(localStorage.length !== 0) {
+  //      currentUser = localStorage.getItem('User');
+  //      this.setState({User: curentUser});
+  //    }
+  // }
 
 state = { 
   isLoggedIn: false,
@@ -55,9 +63,12 @@ changeSportsNews = news => {
   })
 }
 
+
+
   render() {
     console.log(this.state)
     return (
+
       <div>
         <Header changeNews={this.changeNews} changeSportsNews={this.changeSportsNews}/>
         <div id="meat">

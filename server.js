@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = require("./models/index.js");
 
+
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Project3";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
