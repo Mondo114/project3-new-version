@@ -50,7 +50,7 @@ class Stock extends React.Component {
           <h2>Stocks</h2>
         </div>
         <div class="card-body">
-        <p>Company Name: {this.state.companyName}</p>
+        <p>Nasdaq Inc.</p>
         <p>Open: {this.state.open}</p>
         <p>High: {this.state.high}</p>
         <p>Low: {this.state.low}</p>

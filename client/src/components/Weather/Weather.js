@@ -19,17 +19,19 @@ import './Weather.css';
     console.log("componentDidMount")
     axios.get("https://api.openweathermap.org/data/2.5/weather?q=Los+Angeles&units=imperial&appid=001ab0b7efc2baeae3d7cdf13d00c7e8")
     .then(res => {
-      const icon = res.data.weather[0].icon;
-      const description = res.data.weather[0].description;
+      console.log(res.data)
+      //const description = res.data.weather[0].description;
       const main = res.data.weather[0].main;
+      const icon = res.data.weather[0].icon;
       const temp = res.data.main.temp;
       const humidity = res.data.main.humidity;
       
       
+      
       this.setState({ 
         main: res.data.weather[0].main,
-        icon: res.data.weather[0].icon,
-        description: res.data.weather[0].description,
+        icon: 'https://openweathermap.org/img/w/' + res.data.weather[0].icon + '.png',
+        //description: res.data.weather[0].description,
         temp: res.data.main.temp,
         humidity: res.data.main.humidity,
       });
@@ -48,13 +50,12 @@ render() {
             <div class="card-header">
               <h2>Weather</h2>
             </div>
-
-            <div class="card-body">
+           <div class="card-body">
             <p>Current Weather: {this.state.main}</p>
-            <p>Temperature: {this.state.temp}</p>
-            <p>Humidity: {this.state.humidity}</p>
-            <p>{this.state.icon}</p>
-            <p>{this.state.description}</p>
+            <p>Temperature: {this.state.temp} F</p>
+            <p>Humidity: {this.state.humidity} %</p>
+            <p><img src={this.state.icon}/></p>
+         
             </div>
           </div>
         
