@@ -64,6 +64,37 @@ app.post("/Signup", function (req, res) {
       })
 
 });
+app.get("/Login", function (req, res) {
+  db.User.findOne({
+      where: {
+          email: req.session.user.email
+      }
+  }).then(function (data) {
+      res.json(data.dataValues);
+  });
+});
+
+
+app.post("/Login", function (req, res) {
+  console.log(req.body)
+  db.User.findOne({
+          email: req.body.email,
+          password: req.body.password
+  }).then(function (data) {
+      if (data) {
+          console.log("hello returning user");
+          req.session.user = data.dataValues;
+          //res.redirect("/profile");
+          res.json(data.dataValues);
+
+      } else {
+          res.send("you suck")
+      }
+
+  }).catch(function (err) {
+      res.json(err);
+  });
+});
 
 
 app.listen(PORT, function() {

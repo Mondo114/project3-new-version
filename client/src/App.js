@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Signup from "./components/Login/Login.js";
+import Login from "./components/Login/userLogin"
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 // import Footer from "./components/Footer";
@@ -24,7 +25,12 @@ changeLoginState = () => {
 }
 
 GuestGreeting(props) {
-  return <Signup changeLoginState={this.changeLoginState}/>;
+return (
+  <div>
+  <Signup changeLoginState={this.changeLoginState}/>
+  <Login changeLoginState={this.changeLoginState}/>
+  </div>
+);
 };
 
 Greeting(props) {
