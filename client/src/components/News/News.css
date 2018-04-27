@@ -1,9 +1,10 @@
 .card {
     min-height: 300px;
+    max-height: 500px;
+    overflow: auto;
     background: #E5E5E5;
     position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    max-height: 500px;
   }
   .card-header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -16,7 +17,7 @@
     left: 0;
     right: 0;
     background: #B8B8B8;
-    max-height: 225px;
+    max-height: 250px;
   }
   
   .first {

@@ -23,12 +23,17 @@ the-sport-bible
 
 componentDidMount() {
   this.setState({newsSource: this.props.newsSource})
-  console.log("this.props.newsSource: " + this.props.newsSource);
+  // console.log("this.props.newsSource: " + this.props.newsSource);
+  this.getNews(this.props);
 }
 
-componentDidUpdate() {
-  if (this.state.articles === []) {
-  axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.props.newsSource}&apiKey=${APIKEY}`)
+componentWillReceiveProps(nextProps) {
+// console.log("nextProps: " , nextProps);
+  this.getNews(nextProps);
+}
+
+getNews = data => {
+  axios.get(`https://newsapi.org/v2/top-headlines?sources=${data.newsSource}&apiKey=${APIKEY}`)
     .then(res => {
       var indexof = JSON.stringify(res).indexOf("[");
       var last = JSON.stringify(res).lastIndexOf('},"status"');
@@ -36,15 +41,12 @@ componentDidUpdate() {
       var newArray = JSON.parse(newString);
       console.log("newArray: " + newArray)
 
-      // if (sourceName !== newArray[0].source.name) {
       this.setState({
         articles: newArray,
         sourceName: newArray[0].source.name
       })
-      // }
     }
   )
-}
 }
 
   render() {
@@ -62,7 +64,7 @@ componentDidUpdate() {
         {this.state.articles.map((article, index) => {
          if (index < 10) {
           return (
-            <div>
+            <div key={article.url}>
               <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
               <br/>
               <br/>
@@ -71,7 +73,7 @@ componentDidUpdate() {
         }
       })}
       </div>
-    </div>
+    </div>  
   )}
 };
 

@@ -14,19 +14,24 @@ import { Draggable, Droppable } from 'react-drag-and-drop'
 class Wrapper extends React.Component {
      
 state = {
-    newsSource: ""
+    newsSource: "",
+    sportsNewsSource: ""
 }
 
 componentWillMount() {
-    this.setState({newsSource: this.props.newsChoice})
+    this.setState({
+        newsSource: this.props.newsChoice,
+        sportsNewsSource: this.props.sportsNewsChoice
+    })
 }
 
     render() { 
+        console.log(this.props)
         return(
         <div class= "wrapper">
             <div class= "col-lg-12">
             
-                <Draggable class="col-md-4" type="widget" data="sports"><Sports newsSource = {this.props.newsChoice}/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="sports"><Sports newsSource = {this.props.sportsNewsChoice}/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="stock"><Stock/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="news"><News newsSource = {this.props.newsChoice}/></Draggable>

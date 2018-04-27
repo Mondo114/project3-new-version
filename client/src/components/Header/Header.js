@@ -46,13 +46,13 @@ const Header = (props) => (
           Sports News
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onClick={()=> props.changeNews("bbc-sport")}>BBC Sports</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("espn")}>ESPN</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("fox-sports")}>Fox Sports</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("nfl-news")}>NFL News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("nhl-news")}>NHL News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("talksport")}>TalkSport</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-sport-bible")}>SportBible</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("bbc-sport")}>BBC Sports</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("espn")}>ESPN</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("fox-sports")}>Fox Sports</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("nfl-news")}>NFL News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("nhl-news")}>NHL News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("talksport")}>TalkSport</a>
+          <a class="dropdown-item" onClick={()=> props.changeSportsNews("the-sport-bible")}>SportBible</a>
         </div>
       </li>
     </ul>
