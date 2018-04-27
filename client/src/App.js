@@ -12,7 +12,7 @@ import ReactDOM from 'react-dom';
 class App extends Component {
 
 state = { 
-  isLoggedIn : false
+  isLoggedIn : true
 }
 
 changeLoginState = () => {
