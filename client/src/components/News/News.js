@@ -8,7 +8,7 @@ class News extends React.Component {
 
 state = {
   articles: [],
-  source: "abc-news"
+  newsSource: ""
 }
 
 /* News API Sources
@@ -20,9 +20,11 @@ cbc-news
 cbs-news
 cnbc
 cnn
-crypto-coins-news
+fox-news
 msnbc
 nbc-news
+newsweek
+politico
 the-huffington-post
 the-new-york-times
 the-telegraph
@@ -34,17 +36,30 @@ usa-today
 */
 
 componentDidMount() {
-  axios.get(`https://newsapi.org/v2/top-headlines?sources=${this.state.source}&apiKey=${APIKEY}`)
-  .then(res => {
-    var indexof = JSON.stringify(res).indexOf("[");
-    var last = JSON.stringify(res).lastIndexOf('},"status"');
-    var newString = JSON.stringify(res).slice(indexof, last);
-    var newArray = JSON.parse(newString);
-    console.log(newArray)
-    this.setState({
-      articles: newArray,
-      sourceName: newArray[0].source.name
-    })}
+  this.setState({newsSource: this.props.newsSource})
+  // console.log("this.props.newsSource: " + this.props.newsSource);
+  this.getNews(this.props);
+}
+
+componentWillReceiveProps(nextProps) {
+// console.log("nextProps: " , nextProps);
+  this.getNews(nextProps);
+}
+
+getNews = data => {
+  axios.get(`https://newsapi.org/v2/top-headlines?sources=${data.newsSource}&apiKey=${APIKEY}`)
+    .then(res => {
+      var indexof = JSON.stringify(res).indexOf("[");
+      var last = JSON.stringify(res).lastIndexOf('},"status"');
+      var newString = JSON.stringify(res).slice(indexof, last);
+      var newArray = JSON.parse(newString);
+      console.log("newArray: " + newArray)
+
+      this.setState({
+        articles: newArray,
+        sourceName: newArray[0].source.name
+      })
+    }
   )
 }
 
@@ -63,7 +78,7 @@ componentDidMount() {
         {this.state.articles.map((article, index) => {
          if (index < 10) {
           return (
-            <div>
+            <div key={article.url}>
               <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
               <br/>
               <br/>
@@ -71,13 +86,8 @@ componentDidMount() {
           ) 
         }
       })}
-      
       </div>
     </div>  
-        
-  
-
-
   )}
 };
 
