@@ -10,9 +10,9 @@ const Header = (props) => (
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      {/* <li class="nav-item active">
         <a class="nav-link" href="#">Customize<span class="sr-only">(current)</span></a>
-      </li>
+      </li> */}
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           News
@@ -43,7 +43,7 @@ const Header = (props) => (
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Sports News
+          Sports
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" onClick={()=> props.changeSportsNews("bbc-sport")}>BBC Sports</a>
@@ -53,6 +53,29 @@ const Header = (props) => (
           <a class="dropdown-item" onClick={()=> props.changeSportsNews("nhl-news")}>NHL News</a>
           <a class="dropdown-item" onClick={()=> props.changeSportsNews("talksport")}>TalkSport</a>
           <a class="dropdown-item" onClick={()=> props.changeSportsNews("the-sport-bible")}>SportBible</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Special Interest
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("crypto-coins-news")}>Crypto Coins News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("engadget")}>Engadget</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("entertainment-weekly")}>Entertainment Weekly</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("hacker-news")}>Hacker News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("ign")}>IGN</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("medical-news-today")}>Medical News Today</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("mtv-news")}>MTV News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("national-geographic")}>National Geographic</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("new-scientist")}>New Scientist</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("next-big-future")}>Next Big Future</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("polygon")}>Polygon</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("reddit-r-all")}>Reddit</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("t3n")}>T3n</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("the-verge")}>The Verge</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("vice-news")}>Vice News</a>
+          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("wired")}>Wired</a>
         </div>
       </li>
     </ul>

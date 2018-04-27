@@ -6,7 +6,6 @@ import Signup from "./components/Login/Login.js";
 import Login from "./components/Login/userLogin"
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
-// import Footer from "./components/Footer";
 import ReactDOM from 'react-dom';
 
 
@@ -14,9 +13,10 @@ import ReactDOM from 'react-dom';
 class App extends Component {
 
 state = { 
-  isLoggedIn: false,
+  isLoggedIn: true,
   newsChoice: "",
-  sportsNewsChoice: ""
+  sportsNewsChoice: "",
+  specialNewsChoice: ""
 }
 
 changeLoginState = () => {
@@ -55,11 +55,17 @@ changeSportsNews = news => {
   })
 }
 
+changeSpecialNews = news => {
+  this.setState({
+    specialNewsChoice: news
+  })
+}
+
   render() {
     console.log(this.state)
     return (
       <div>
-        <Header changeNews={this.changeNews} changeSportsNews={this.changeSportsNews}/>
+        <Header changeNews={this.changeNews} changeSportsNews={this.changeSportsNews} changeSpecialNews={this.changeSpecialNews}/>
         <div id="meat">
           {this.Greeting(this.state.isLoggedIn)}
         </div>
@@ -69,7 +75,7 @@ changeSportsNews = news => {
   }
 
   UserGreeting(props) {
-    return <Wrapper newsChoice={this.state.newsChoice} sportsNewsChoice={this.state.sportsNewsChoice}/>;
+    return <Wrapper newsChoice={this.state.newsChoice} sportsNewsChoice={this.state.sportsNewsChoice} specialNewsChoice={this.state.specialNewsChoice}/>;
   };
 };
 

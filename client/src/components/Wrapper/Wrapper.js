@@ -8,6 +8,7 @@ import Stock from "./../Stock";
 import Twitter from "./../Twitter";
 import Weather from "./../Weather";
 import Youtube from "./../Youtube";
+import Special from "./../Special";
 import { Draggable, Droppable } from 'react-drag-and-drop'
 
 
@@ -15,13 +16,15 @@ class Wrapper extends React.Component {
      
 state = {
     newsSource: "",
-    sportsNewsSource: ""
+    sportsNewsSource: "",
+    specialNewsSource: ""
 }
 
 componentWillMount() {
     this.setState({
         newsSource: this.props.newsChoice,
-        sportsNewsSource: this.props.sportsNewsChoice
+        sportsNewsSource: this.props.sportsNewsChoice,
+        specialNewsSource: this.props.specialNewsChoice
     })
 }
 
@@ -35,6 +38,7 @@ componentWillMount() {
                 <Draggable class="col-md-4" type="widget" data="stock"><Stock/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="news"><News newsSource = {this.props.newsChoice}/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="news"><Special newsSource = {this.props.specialNewsChoice}/></Draggable>
             
             <Droppable
                 types={["widget"]}  

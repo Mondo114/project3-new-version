@@ -1,24 +1,33 @@
 import React from "react";
-import "./Sports.css";
+import "./Special.css";
 import axios from "axios";
 
 const APIKEY = "89cfe00e2a89455d86cebbebd6b4c4df";
 
-class Sports extends React.Component {
+class Special extends React.Component {
 
 state = {
   articles: [],
   newsSource: ""
 }
 
-/* Sports News API Sources
-bbc-sport
-espn
-fox-sports
-nfl-news
-nhl-news
-talksport
-the-sport-bible
+/* Special Interest News API Sources
+crypto-coins-news
+engadget
+entertainment-weekly
+hacker-news
+ign
+medical-news-today
+mtv-news
+national-geographic
+new-scientist
+next-big-future
+polygon
+reddit-r-all
+t3n
+the-verge
+vice-news
+wired
 */
 
 componentDidMount() {
@@ -54,7 +63,7 @@ getNews = data => {
     return (
       <div class="card">
         <div class="card-header">
-          <h2>Sports</h2>
+          <h2>Special Interest</h2>
         </div>
         
         <div class="card-body">
@@ -77,4 +86,4 @@ getNews = data => {
   )}
 };
 
-export default Sports;
+export default Special;
