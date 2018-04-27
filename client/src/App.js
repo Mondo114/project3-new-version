@@ -15,7 +15,8 @@ class App extends Component {
 
 state = { 
   isLoggedIn: false,
-  newsChoice: ""
+  newsChoice: "",
+  sportsNewsChoice: ""
 }
 
 changeLoginState = () => {
@@ -48,11 +49,17 @@ changeNews = news => {
   })
 }
 
+changeSportsNews = news => {
+  this.setState({
+    sportsNewsChoice: news
+  })
+}
+
   render() {
     console.log(this.state)
     return (
       <div>
-        <Header changeNews={this.changeNews}/>
+        <Header changeNews={this.changeNews} changeSportsNews={this.changeSportsNews}/>
         <div id="meat">
           {this.Greeting(this.state.isLoggedIn)}
         </div>
@@ -60,8 +67,9 @@ changeNews = news => {
       </div>
     )
   }
+
   UserGreeting(props) {
-    return <Wrapper newsChoice={this.state.newsChoice}/>;
+    return <Wrapper newsChoice={this.state.newsChoice} sportsNewsChoice={this.state.sportsNewsChoice}/>;
   };
 };
 

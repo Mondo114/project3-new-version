@@ -1,5 +1,7 @@
 .card {
   min-height: 300px;
+  max-height: 500px;
+  overflow: auto;
   background: #E5E5E5;
   position: relative;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
