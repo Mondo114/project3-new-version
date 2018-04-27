@@ -20,7 +20,7 @@ class Login extends Component {
   };
 
   handleFormSubmit = event => {
-    console.log(this.props)
+    
     // this.props.changeLoginState() // run this line when you authenticate user
     event.preventDefault();
     // console.log(this.state)
