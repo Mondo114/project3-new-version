@@ -8,7 +8,8 @@ class News extends React.Component {
 
 state = {
   articles: [],
-  newsSource: ""
+  newsSource: "",
+  showWidgit: true
 }
 
 /* News API Sources
@@ -46,6 +47,12 @@ componentWillReceiveProps(nextProps) {
   this.getNews(nextProps);
 }
 
+clickExit() {
+  this.setState({
+    showWidgit: false
+  })
+}
+
 getNews = data => {
   axios.get(`https://newsapi.org/v2/top-headlines?sources=${data.newsSource}&apiKey=${APIKEY}`)
     .then(res => {
@@ -66,28 +73,35 @@ getNews = data => {
   render() {
     console.log("this.state.articles: " + this.state.articles);
     return (
-      <div class="card">
-        <div class="card-header">
-          <h2>News</h2>
-        </div>
-        
-        <div class="card-body">
-        
-        <p>{this.state.sourceName}</p>
-
-        {this.state.articles.map((article, index) => {
-         if (index < 10) {
-          return (
-            <div key={article.url}>
-              <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
-              <br/>
-              <br/>
+      <div>
+        {this.state.showWidgit?
+        <div class="card">
+          <div class="card-header news-header">
+            <div class="x-box" onClick={()=>this.clickExit()}>
+              <p class="x-letter">x</p>
             </div>
-          ) 
-        }
-      })}
+            <h2>News</h2>
+          </div>
+          
+          <div class="card-body">
+          
+          <p>{this.state.sourceName}</p>
+
+          {this.state.articles.map((article, index) => {
+          if (index < 10) {
+            return (
+              <div key={article.url}>
+                <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
+                <br/>
+                <br/>
+              </div>
+            ) 
+          }
+        })}
+        </div>
       </div>
-    </div>  
+      :null}
+    </div>
   )}
 };
 

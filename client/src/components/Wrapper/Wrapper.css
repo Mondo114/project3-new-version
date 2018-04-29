@@ -1,14 +1,18 @@
 .wrapper {
   min-height: 100%;
-  padding-top: 100px;
-  padding-left: 100px;
-  padding-bottom: 100px;
+  height: 900px;
+  padding: 100px;
+  background-image: url("./fridge-texture-light.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .col-md-4 {
   float: left;
   position: relative;
   min-height: 400px;
+  margin-top: -30px;
 }
 
 .col-lg-12 {

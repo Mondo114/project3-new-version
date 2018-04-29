@@ -62,7 +62,7 @@ getNews = data => {
     console.log("this.state.articles: " + this.state.articles);
     return (
       <div class="card">
-        <div class="card-header">
+        <div class="card-header special-header">
           <h2>Special Interest</h2>
         </div>
         

@@ -1,14 +1,73 @@
-.header {
-  min-height: 100px;
-  background: #E5E5E5;
-  position: relative;
+.navbar {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  z-index: 999;
+  border-bottom: 2px solid black;
+  background: rgb(192, 255, 229) !important;
 }
 
-.header span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 3px;
-  background: #B8B8B8;
+.navbar-brand {
+  font-family: 'Fredoka One', cursive;
+  font-size: 45px;
+}
+
+.letter-f {
+  color: yellow;
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-r {
+  color: rgb(83, 118, 216);
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-i {
+  color: orange;
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-j {
+  color: rgb(94, 201, 80);
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-apostrophe {
+  color: rgb(83, 118, 216);
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-i2 {
+  color: red;
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.letter-t {
+  color: rgb(189, 73, 189);
+  margin: 3px;
+  text-shadow: 2px 3px 6px black;
+  -webkit-text-stroke: 2px black;
+}
+
+.nav-item {
+  /* font-weight: bold; */
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.color-me {
+  color: blue;
 }

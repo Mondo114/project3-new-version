@@ -46,7 +46,7 @@ class Stock extends React.Component {
   render() {
     return (
       <div class="card">
-        <div class="card-header">
+        <div class="card-header stock-header">
           <h2>Stocks</h2>
         </div>
         <div class="card-body">
