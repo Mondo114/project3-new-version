@@ -11,7 +11,7 @@ import Youtube from "./../Youtube";
 import ReactDOM from 'react-dom';
 import Special from "./../Special";
 import { Draggable, Droppable } from 'react-drag-and-drop'
-// import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+ //import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 // const getItems = count => {
 // var arr = [<Sports />, <Stock />, <News />, <Weather />, <Weather />, <Stock />]
@@ -148,6 +148,7 @@ componentWillMount() {
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="news"><News newsSource = {this.props.newsChoice}/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="news"><Special newsSource = {this.props.specialNewsChoice}/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="clock"><Clock/></Draggable>
             
             <Droppable
                 types={["widget"]}  
