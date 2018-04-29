@@ -150,7 +150,7 @@ componentWillMount() {
                 <Droppable
                     types={["widget"]}  
                     onDrop={this.onDrop.bind(this)}>
-                    <div className="col-md-4"></div>
+                    <div className="col-md-4 test"></div>
                 </Droppable>
             </div>
         </div>

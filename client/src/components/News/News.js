@@ -47,12 +47,6 @@ componentWillReceiveProps(nextProps) {
   this.getNews(nextProps);
 }
 
-clickExit() {
-  this.setState({
-    showWidgit: false
-  })
-}
-
 getNews = data => {
   axios.get(`https://newsapi.org/v2/top-headlines?sources=${data.newsSource}&apiKey=${APIKEY}`)
     .then(res => {
@@ -69,6 +63,12 @@ getNews = data => {
     }
   )
 }
+
+  clickExit() {
+    this.setState({
+      showWidgit: false
+    })
+  }
 
   render() {
     console.log("this.state.articles: " + this.state.articles);

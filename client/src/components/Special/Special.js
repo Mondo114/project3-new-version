@@ -8,7 +8,8 @@ class Special extends React.Component {
 
 state = {
   articles: [],
-  newsSource: ""
+  newsSource: "",
+  showWidgit: true
 }
 
 /* Special Interest News API Sources
@@ -58,31 +59,44 @@ getNews = data => {
   )
 }
 
+  clickExit() {
+    this.setState({
+      showWidgit: false
+    })
+  }
+
   render() {
     console.log("this.state.articles: " + this.state.articles);
     return (
-      <div class="card">
-        <div class="card-header special-header">
-          <h2>Special Interest</h2>
-        </div>
-        
-        <div class="card-body">
-        
-        <p>{this.state.sourceName}</p>
-
-        {this.state.articles.map((article, index) => {
-         if (index < 10) {
-          return (
-            <div key={article.url}>
-              <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
-              <br/>
-              <br/>
+      <div>
+        {this.state.showWidgit?
+        <div class="card">
+          <div class="card-header special-header">
+            <div class="x-box" onClick={()=>this.clickExit()}>
+              <p class="x-letter">x</p>
             </div>
-          ) 
-        }
-      })}
+            <h2>Special Interest</h2>
+          </div>
+          
+          <div class="card-body">
+          
+          <p>{this.state.sourceName}</p>
+
+          {this.state.articles.map((article, index) => {
+          if (index < 10) {
+            return (
+              <div key={article.url}>
+                <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
+                <br/>
+                <br/>
+              </div>
+            ) 
+          }
+        })}
+        </div>
       </div>
-    </div>  
+      :null}
+    </div>
   )}
 };
 
