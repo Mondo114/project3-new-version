@@ -1,14 +1,11 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import "./Wrapper.css";
 import Clock from "./../Clock";
 import News from "./../News";
-import Reddit from "./../Reddit";
 import Sports from "./../Sports";
 import Stock from "./../Stock";
-import Twitter from "./../Twitter";
 import Weather from "./../Weather";
-import Youtube from "./../Youtube";
-import ReactDOM from 'react-dom';
 import Special from "./../Special";
 import { Draggable, Droppable } from 'react-drag-and-drop'
 // import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -143,20 +140,21 @@ componentWillMount() {
         <div class= "wrapper">
             <div class= "col-lg-12">
             
+                <Draggable class="col-md-4" type="widget" data="news"><News newsSource = {this.props.newsChoice}/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="sports"><Sports newsSource = {this.props.sportsNewsChoice}/></Draggable>
+                <Draggable class="col-md-4" type="widget" data="news"><Special newsSource = {this.props.specialNewsChoice}/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="stock"><Stock/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
-                <Draggable class="col-md-4" type="widget" data="news"><News newsSource = {this.props.newsChoice}/></Draggable>
-                <Draggable class="col-md-4" type="widget" data="news"><Special newsSource = {this.props.specialNewsChoice}/></Draggable>
-            
-            <Droppable
-                types={["widget"]}  
-                onDrop={this.onDrop.bind(this)}>
-                <div className="col-md-4"></div>
-            </Droppable>
+                
+                <Droppable
+                    types={["widget"]}  
+                    onDrop={this.onDrop.bind(this)}>
+                    <div className="col-md-4"></div>
+                </Droppable>
             </div>
         </div>
     )}
+
     onDrop(data) {
         console.log(data)
         // => Sports  

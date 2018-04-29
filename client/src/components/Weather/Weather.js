@@ -47,7 +47,7 @@ render() {
   return (
 
           <div class="card">
-            <div class="card-header">
+            <div class="card-header weather-header">
               <h2>Weather</h2>
             </div>
            <div class="card-body">
@@ -55,11 +55,8 @@ render() {
             <p>Temperature: {this.state.temp} F</p>
             <p>Humidity: {this.state.humidity} %</p>
             <p><img src={this.state.icon}/></p>
-         
             </div>
           </div>
-        
-      
   );
 }
  }

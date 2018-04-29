@@ -1,11 +1,13 @@
 .footer {
+  /* position: absolute; */
   bottom: 0;
-  padding: 10px;
-  height: 50px;
   width: 100%;
+  padding: 12px;
+  height: 50px;
   background-color: rgb(105, 88, 121);
-  color: rgb(57, 214, 162);
+  background: rgb(192, 255, 229);
+  color: black;
   text-align: center;
-  border: 2px solid black;
+  border-top: 2px solid black;
 }
 
