@@ -4,7 +4,7 @@ import "./Clock.css";
  
 class Clock extends React.Component {
   state = {
-    weather: []
+    clock: []
   }
 
   
