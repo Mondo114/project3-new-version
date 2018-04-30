@@ -50,9 +50,14 @@ class Clock extends React.Component {
             </div> */}
             <h2>Clock</h2>
           </div>
-        <p className="clock">
-          The time is {this.state.time}.
-        </p>
+          <div class="card-body">
+            <p id="clock-display-title">
+              <strong>Date, time:</strong>
+            </p>
+            <p id="clock-display">
+              {this.state.time}
+            </p>
+          </div>
         </div>
       //   :null}
       // </div>

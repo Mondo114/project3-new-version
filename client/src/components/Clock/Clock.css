@@ -23,3 +23,13 @@
   background: rgb(192, 255, 229);
   border-bottom: 2px solid black;
 }
+
+#clock-display-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+#clock-display {
+  margin-top: 20px;
+  text-align: center;
+}

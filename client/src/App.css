@@ -8,7 +8,7 @@
  }
  
  body, html {
-  background: rgb(142, 160, 218);
+  background: white;
   height: 100%;
   position: relative;
 }
@@ -25,15 +25,17 @@ body {
   max-height: 500px;
   overflow: auto;
   position: relative;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
 }
 
 .card-body {
-  position: absolute;
+  /* position: absolute; */
+  height: 250px;
   bottom: 0;
   left: 0;
   right: 0;
+  font-size: 20px;
 }
 
 .card-title {
@@ -90,4 +92,36 @@ body {
 .x-letter {
   position: relative;
   bottom: 5px;
+}
+
+.card-body p {
+  margin-top: -5px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(32, 109, 90);
+  border: 1px solid black;
+  border-left: 2px solid black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(192, 255, 229);
+  border: 1px solid black;
+  border-left: 2px solid black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(119, 194, 163);
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+  background: rgb(32, 109, 90);
 }

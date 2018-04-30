@@ -50,11 +50,11 @@ render() {
             <div class="card-header weather-header">
               <h2>Weather</h2>
             </div>
-           <div class="card-body">
-            <p>Current Weather: {this.state.main}</p>
-            <p>Temperature: {this.state.temp} F</p>
-            <p>Humidity: {this.state.humidity} %</p>
-            <p><img src={this.state.icon}/></p>
+           <div class="card-body weather-body">
+            <p id="weather-img"><img src={this.state.icon}/></p>
+            <p><strong>Current Weather:</strong> {this.state.main}</p>
+            <p><strong>Temperature:</strong> {this.state.temp} F</p>
+            <p id="weather-humidity"><strong>Humidity:</strong> {this.state.humidity} %</p>
             </div>
           </div>
   );

@@ -85,15 +85,14 @@ getNews = data => {
           
           <div class="card-body">
           
-          <p>{this.state.sourceName}</p>
+          <p><strong>{this.state.sourceName}</strong></p>
 
           {this.state.articles.map((article, index) => {
           if (index < 10) {
             return (
               <div key={article.url}>
                 <a class="card-link" target="_blank" href={article.url}>{article.title}</a>
-                <br/>
-                <br/>
+                <hr/>
               </div>
             ) 
           }

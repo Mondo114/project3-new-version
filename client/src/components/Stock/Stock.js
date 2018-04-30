@@ -50,11 +50,15 @@ class Stock extends React.Component {
           <h2>Stocks</h2>
         </div>
         <div class="card-body">
-        <p>Nasdaq Inc.</p>
-        <p>Open: {this.state.open}</p>
-        <p>High: {this.state.high}</p>
-        <p>Low: {this.state.low}</p>
-        <p>Close: {this.state.close}</p>
+            <p id="stock-name"><strong>Nasdaq Inc.</strong></p>
+          <div id="open-close">
+            <p id="stock-open"><strong>Open:</strong> {this.state.open}</p>
+            <p id="stock-close"><strong>Close:</strong> {this.state.close}</p>
+          </div>
+          <div id="low-high">
+            <p id="stock-low"><strong>Low:</strong> {this.state.low}</p>
+            <p id="stock-high"><strong>High:</strong> {this.state.high}</p>
+          </div>
        </div>
         
         

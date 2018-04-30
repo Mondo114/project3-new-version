@@ -23,3 +23,18 @@
   background: rgb(192, 255, 229);
   border-bottom: 2px solid black;
 }
+
+#stock-name {
+  text-align: center;
+  font-size: 30px;
+}
+
+#open-close {
+  display: inline;
+  overflow: auto;
+}
+
+#low-high {
+  display: inline;
+  overflow: auto;
+}

@@ -23,3 +23,16 @@
   background: rgb(192, 255, 229);
   border-bottom: 2px solid black;
 }
+
+#weather-humidity {
+  display: inline;
+}
+
+p img {
+  width: 150px;
+  float: right;
+}
+
+#weather-img {
+  text-align: center;
+}
