@@ -29,6 +29,13 @@ body {
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
 }
 
+.card-header {
+  background-image: url("./fridge-metal-light.jpg") !important;
+  background-position: 0 10% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 .card-body {
   /* position: absolute; */
   height: 250px;
@@ -36,6 +43,10 @@ body {
   left: 0;
   right: 0;
   font-size: 20px;
+  background-image: url("./paper-light.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-title {

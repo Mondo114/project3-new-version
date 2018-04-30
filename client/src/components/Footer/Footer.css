@@ -5,10 +5,12 @@
   width: 100%;
   padding: 12px;
   height: 50px;
-  background-color: rgb(105, 88, 121);
-  background: rgb(192, 255, 229);
   color: black;
   text-align: center;
   border-top: 2px solid black;
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 

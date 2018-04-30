@@ -4,7 +4,12 @@
   position: fixed;
   z-index: 999;
   border-bottom: 2px solid black;
-  background: rgb(192, 255, 229) !important;
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .navbar-brand {
