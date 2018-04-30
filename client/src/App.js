@@ -7,21 +7,28 @@ import Login from "./components/Login/userLogin"
 import Wrapper from "./components/Wrapper";
 import Footer from "./components/Footer";
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   var currentUser;
-  //    if(localStorage.length !== 0) {
-  //      currentUser = localStorage.getItem('User');
-  //      this.setState({User: curentUser});
-  //    }
-  // }
-
+  constructor() {
+    super();
+    var currentUser;
+     if(localStorage.length !== 0) {
+       currentUser = localStorage.getItem('User');
+       axios.post('/Signup', this.state)
+       .then((response) => 
+        {
+             this.changeLoginState()
+           }
+          
+          )
+     
+  }
+  }
 state = { 
-  isLoggedIn: true,
+  isLoggedIn: false,
   newsChoice: "",
   sportsNewsChoice: "",
   specialNewsChoice: ""
