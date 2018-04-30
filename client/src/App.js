@@ -28,7 +28,7 @@ class App extends Component {
   }
   }
 state = { 
-  isLoggedIn: false,
+  isLoggedIn: true,
   newsChoice: "",
   sportsNewsChoice: "",
   specialNewsChoice: ""

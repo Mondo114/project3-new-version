@@ -5,7 +5,6 @@ import "./Clock.css";
 
 class Clock extends React.Component {
   state = {
-    clock: [],
     showWidgit: true
   }
 
@@ -30,9 +29,22 @@ class Clock extends React.Component {
     clearInterval(this.intervalID);
   }
 
+  displayTime() {
+    var time = new Date().toLocaleString()
+    return time.split(', ')[1]
+  }
+
+  // displayDate() {
+  //   var date = new Date().toLocaleString()
+  //    return date.split(', ')[0]
+  // }
+
   tick() {
-    this.setState({
-      time: new Date().toLocaleString()
+    var time = this.displayTime()
+    // var date = this.displayDate()
+      this.setState({
+      time: time,
+      // date: date,
     });
   }
 
@@ -55,10 +67,7 @@ class Clock extends React.Component {
           </div>
           <div class="card-body">
             <p id="clock-display-title">
-              <strong>Date, time:</strong>
-            </p>
-            <p id="clock-display">
-              {this.state.time}
+              <strong>{this.state.time}</strong>
             </p>
           </div>
         </div>

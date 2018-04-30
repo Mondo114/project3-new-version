@@ -27,6 +27,7 @@ body {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
+  /* background-color: lemonchiffon; */
   background-image: url("./paper-light.jpg");
   background-position: center center;
   background-repeat: no-repeat;

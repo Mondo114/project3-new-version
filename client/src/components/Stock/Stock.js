@@ -20,6 +20,7 @@ class Stock extends React.Component {
     axios.get("https://api.iextrading.com/1.0/stock/market/batch?symbols=ndaq,aapl,googl&types=quote,chart&range=1m&last=5")
       .then(res => {
         const companyName = res.data.NDAQ.quote.companyName;
+        const current = res.data.NDAQ.quote.iexRealtimePrice;
         const open = res.data.NDAQ.quote.open;
         const high = res.data.NDAQ.quote.high;
         const low = res.data.NDAQ.quote.low;
@@ -27,6 +28,7 @@ class Stock extends React.Component {
         
         this.setState({
           companyName: res.data.NDAQ.quote.companyName,
+          current: res.data.NDAQ.quote.iexRealtimePrice,
           open: res.data.NDAQ.quote.open,
           high: res.data.NDAQ.quote.high,
           low: res.data.NDAQ.quote.low,
@@ -56,13 +58,12 @@ class Stock extends React.Component {
           </div>
           <div class="card-body">
               <p id="stock-name"><strong>Nasdaq Inc.</strong></p>
-            <div id="open-close">
-              <p id="stock-open"><strong>Open:</strong> {this.state.open}</p>
-              <p id="stock-close"><strong>Close:</strong> {this.state.close}</p>
-            </div>
-            <div id="low-high">
-              <p id="stock-low"><strong>Low:</strong> {this.state.low}</p>
-              <p id="stock-high"><strong>High:</strong> {this.state.high}</p>
+              <p id="stock-current"><strong>Current Price:<br/></strong> {this.state.current}</p>
+            <div id="stock-right">
+              <p id="stock-open"><strong>Open:<br/></strong> {this.state.open}</p>
+              <p id="stock-close"><strong>Close:<br/></strong> {this.state.close}</p>
+              <p id="stock-low"><strong>Low:<br/></strong> {this.state.low}</p>
+              <p id="stock-high"><strong>High:<br/></strong> {this.state.high}</p>
             </div>
           </div>
         </div>

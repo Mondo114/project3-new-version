@@ -37,3 +37,12 @@
   display: inline;
   overflow: auto;
 }
+
+#stock-current {
+  display: inline;
+}
+
+#stock-right {
+  float: right;
+  display: inline;
+}
