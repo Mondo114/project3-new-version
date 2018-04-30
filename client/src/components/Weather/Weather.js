@@ -22,7 +22,7 @@ import './Weather.css';
       const icon = res.data.weather[0].icon;
       const temp = res.data.main.temp;
       const humidity = res.data.main.humidity;
-      
+      if (this.props.showWeatherComp === true) {
       this.setState({ 
         main: res.data.weather[0].main,
         icon: 'https://openweathermap.org/img/w/' + res.data.weather[0].icon + '.png',
@@ -31,6 +31,7 @@ import './Weather.css';
         humidity: res.data.main.humidity,
         showWidgit: true
       });
+    }
       console.log(temp);
     })
   }
@@ -39,6 +40,7 @@ import './Weather.css';
     this.setState({
       showWidgit: false
     })
+    this.props.resetWeatherComp();
   }
 
   render() {

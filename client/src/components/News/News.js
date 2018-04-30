@@ -45,6 +45,11 @@ componentDidMount() {
 componentWillReceiveProps(nextProps) {
 // console.log("nextProps: " , nextProps);
   this.getNews(nextProps);
+  if (this.props.showNewsComp === true) {
+    this.setState({
+      showWidgit: true
+    })
+  }
 }
 
 getNews = data => {
@@ -68,6 +73,7 @@ getNews = data => {
     this.setState({
       showWidgit: false
     })
+    this.props.resetNewsComp();
   }
 
   render() {

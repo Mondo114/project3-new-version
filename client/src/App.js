@@ -31,7 +31,13 @@ state = {
   isLoggedIn: false,
   newsChoice: "",
   sportsNewsChoice: "",
-  specialNewsChoice: ""
+  specialNewsChoice: "",
+  showNewsComp: true,
+  showSportsComp: true,
+  showSpecialComp: true,
+  showWeatherComp: true,
+  showStockComp: true,
+  showClockComp: true
 }
 
 changeLoginState = () => {
@@ -76,12 +82,88 @@ changeSpecialNews = news => {
   })
 }
 
+showComp = (selection) => {
+
+  switch(selection) {
+  
+  case "news":
+    this.setState({
+      showNewsComp: true
+    })
+    break;
+
+  case "sports":
+    this.setState({
+      showSportsComp: true
+    })
+    break;
+
+  case "weather":
+    this.setState({
+      showWeatherComp: true
+    })
+    break;
+
+  case "special":
+    this.setState({
+      showSpecialComp: true
+    })
+    break;
+
+  case "stock":
+    this.setState({
+      showStockComp: true
+    })
+    break;
+
+    case "clock":
+    this.setState({
+      showClockComp: true
+    })
+    break;
+  }
+}
+
+resetNewsComp = () => {
+  this.setState({
+    showNewsComp: false
+  })
+}
+resetSportsComp = () => {
+  this.setState({
+    showSportsComp: false
+  })
+}
+
+resetSpecialComp = () => {
+
+  this.setState({
+    showSpecialComp: false
+  })
+}
+
+resetWeatherComp = () => {
+  this.setState({
+    showWeatherComp: false
+  })
+}
+resetStockComp = () => {
+  this.setState({
+    showStockComp: false
+  })
+}
+resetClockComp = () => {
+  this.setState({
+    showClockComp: false
+  })
+}
+
   render() {
     console.log(this.state)
     return (
 
       <div>
-        <Header changeNews={this.changeNews} changeSportsNews={this.changeSportsNews} changeSpecialNews={this.changeSpecialNews}/>
+        <Header showComp={this.showComp} changeNews={this.changeNews} changeSportsNews={this.changeSportsNews} changeSpecialNews={this.changeSpecialNews}/>
         <div id="meat">
           {this.Greeting(this.state.isLoggedIn)}
         </div>
@@ -91,7 +173,10 @@ changeSpecialNews = news => {
   }
 
   UserGreeting(props) {
-    return <Wrapper newsChoice={this.state.newsChoice} sportsNewsChoice={this.state.sportsNewsChoice} specialNewsChoice={this.state.specialNewsChoice}/>;
+    return <Wrapper state={this.state} showComp={(selection) => this.showComp} resetNewsComp={this.resetNewsComp} 
+    resetSportsComp={this.resetSportsComp} resetSpecialComp={this.resetSpecialComp} resetWeatherComp={this.resetWeatherComp} 
+    resetStockComp={this.resetStockComp} newsChoice={this.state.newsChoice} sportsNewsChoice={this.state.sportsNewsChoice} 
+    resetClockComp={this.resetClockComp} specialNewsChoice={this.state.specialNewsChoice}/>;
   };
 };
 
