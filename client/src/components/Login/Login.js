@@ -22,6 +22,7 @@ class Signup extends Component {
 
   handleFormSubmit = event => {
     localStorage.setItem('User', this.state.email);
+    localStorage.setItem('User', this.state.password);
     console.log(this.state);
     // this.props.changeLoginState() // run this line when you authenticate user
     event.preventDefault();
