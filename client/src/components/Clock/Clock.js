@@ -29,10 +29,18 @@ class Clock extends React.Component {
   componentWillUnmount() {
     clearInterval(this.intervalID);
   }
+  
+  displayTime() {
+    var time = new Date().toLocaleString()
+    return time.split(', ')[1]
+      
+  }
+
 
   tick() {
+    var time = this.displayTime()
     this.setState({
-      time: new Date().toLocaleString()
+      time: time
     });
   }
 
@@ -55,7 +63,7 @@ class Clock extends React.Component {
           </div>
           <div class="card-body">
             <p id="clock-display-title">
-              <strong>Date, time:</strong>
+              <strong></strong>
             </p>
             <p id="clock-display">
               {this.state.time}
