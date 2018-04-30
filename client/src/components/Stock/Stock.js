@@ -25,6 +25,7 @@ class Stock extends React.Component {
         const low = res.data.NDAQ.quote.low;
         const close = res.data.NDAQ.quote.close;
         
+        if (this.props.showStockComp === true) {
         this.setState({
           companyName: res.data.NDAQ.quote.companyName,
           open: res.data.NDAQ.quote.open,
@@ -33,6 +34,7 @@ class Stock extends React.Component {
           close: res.data.NDAQ.quote.close,
           showWidgit: true
         });
+      }
         //console.log(companyName);
       });
   }
@@ -41,6 +43,7 @@ class Stock extends React.Component {
     this.setState({
       showWidgit: false
     })
+    this.props.resetStockComp();
   }
 
   render() {

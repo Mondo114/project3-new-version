@@ -21,10 +21,13 @@ class Clock extends React.Component {
       () => this.tick(),
       1000
     );
+    if (this.props.showClockComp === true) {
     this.setState({
       showWidgit: true
+    
     })
   }
+}
 
   componentWillUnmount() {
     clearInterval(this.intervalID);
@@ -40,6 +43,7 @@ class Clock extends React.Component {
     this.setState({
       showWidgit: false
     })
+    this.props.resetClockComp();
   }
 
   render() {

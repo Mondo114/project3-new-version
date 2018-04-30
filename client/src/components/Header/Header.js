@@ -23,27 +23,112 @@ const Header = (props) => (
           News
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onClick={()=> props.changeNews("abc-news")}>ABC News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("bbc-news")}>BBC News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("business-insider")}>Business Insider</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("buzzfeed")}>Buzzfeed</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("cbc-news")}>CBC News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("cbs-news")}>CBS News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("cnbc")}>CNBC</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("cnn")}>CNN</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("fox-news")}>Fox News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("msnbc")}>MSNBC</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("nbc-news")}>NBC News</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("newsweek")}>Newsweek</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("politico")}>Politico</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-huffington-post")}>The Huffington Post</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-new-york-times")}>The New York Times</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-telegraph")}>The Telegraph</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-wall-street-journal")}>The Wall Street Journal</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-washington-post")}>The Washington Post</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("the-washington-times")}>The Washington Times</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("time")}>Time</a>
-          <a class="dropdown-item" onClick={()=> props.changeNews("usa-today")}>USA Today</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("abc-news")
+            props.showComp('news')
+            }
+          }>ABC News</a>
+          <a class="dropdown-item" onClick={()=>  {
+            props.changeNews("bbc-news")
+            props.showComp('news')
+            }
+        
+        }>BBC News</a>
+          <a class="dropdown-item" onClick={()=>  {
+            props.changeNews("business-insider")
+            props.showComp('news')
+            }
+        }>Business Insider</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("buzzfeed")
+            props.showComp('news')
+            }
+        }>Buzzfeed</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("cbc-news")
+            props.showComp('news')
+            }
+        }>CBC News</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("cbs-news")
+            props.showComp('news')
+            }
+        }>CBS News</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("business-cnbc")
+            props.showComp('news')
+            }
+        }>CNBC</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("cnn")
+            props.showComp('news')
+            }
+        }>CNN</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("fox-news")
+            props.showComp('news')
+            }
+        }>Fox News</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("msnbc")
+            props.showComp('news')
+            }
+        }>MSNBC</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("nbc-news")
+            props.showComp('news')
+            }
+        }>NBC News</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("newsweek")
+            props.showComp('news')
+            }
+        }>Newsweek</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("politico")
+            props.showComp('news')
+            }
+        }>Politico</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-huffington-post")
+            props.showComp('news')
+            }
+        }>The Huffington Post</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-new-york-times")
+            props.showComp('news')
+            }
+        }>The New York Times</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-telegraph")
+            props.showComp('news')
+            }
+        }>The Telegraph</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-wall-street-journal")
+            props.showComp('news')
+            }
+        }>The Wall Street Journal</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-washington-post")
+            props.showComp('news')
+            }
+        }>The Washington Post</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("the-washington-times")
+            props.showComp('news')
+            }
+        }>The Washington Times</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("time")
+            props.showComp('news')
+            }
+        }>Time</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeNews("usa-today")
+            props.showComp('news')
+            }
+        }>USA Today</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -51,13 +136,39 @@ const Header = (props) => (
           Sports
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("bbc-sport")}>BBC Sports</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("espn")}>ESPN</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("fox-sports")}>Fox Sports</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("nfl-news")}>NFL News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("nhl-news")}>NHL News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("talksport")}>TalkSport</a>
-          <a class="dropdown-item" onClick={()=> props.changeSportsNews("the-sport-bible")}>SportBible</a>
+          <a class="dropdown-item" onClick={()=> {
+            props.changeSportsNews("bbc-sport")
+            props.showComp('sports')
+          }
+            }>BBC Sports</a>
+          <a class="dropdown-item" onClick={()=>{
+            props.changeSportsNews("espn")
+            props.showComp('sports')
+          }
+        }>ESPN</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSportsNews("fox-sports")
+          props.showComp('sports')
+          }
+          }>Fox Sports</a>
+          <a class="dropdown-item" onClick={()=>{
+          props.changeSportsNews("nfl-news")
+          props.showComp('sports')
+          }
+          }>NFL News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSportsNews("nhl-news")
+          props.showComp('sports')
+          }
+        }>NHL News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSportsNews("talksports")
+          props.showComp('sports')
+          }}>TalkSport</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSportsNews("the-sports-bible")
+          props.showComp('sports')
+          }}>SportBible</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -65,32 +176,98 @@ const Header = (props) => (
           Special Interest
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("crypto-coins-news")}>Crypto Coins News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("engadget")}>Engadget</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("entertainment-weekly")}>Entertainment Weekly</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("hacker-news")}>Hacker News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("ign")}>IGN</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("medical-news-today")}>Medical News Today</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("mtv-news")}>MTV News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("national-geographic")}>National Geographic</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("new-scientist")}>New Scientist</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("next-big-future")}>Next Big Future</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("polygon")}>Polygon</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("reddit-r-all")}>Reddit</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("t3n")}>T3n</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("the-verge")}>The Verge</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("vice-news")}>Vice News</a>
-          <a class="dropdown-item" onClick={()=> props.changeSpecialNews("wired")}>Wired</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("crypto-coins-news")
+          props.showComp('special')
+        }
+        }>Crypto Coins News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("engadget")
+          props.showComp('special')
+        }
+        }>Engadget</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("entertainment-weekly")
+          props.showComp('special')
+        }
+        }>Entertainment Weekly</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("hacker-news")
+          props.showComp('special')
+        }
+        }>Hacker News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("ign")
+          props.showComp('special')
+        }
+        }>IGN</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("medical-news-today")
+          props.showComp('special')
+        }
+        }>Medical News Today</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("mtv-news")
+          props.showComp('special')
+        }
+        }>MTV News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("national-geographic")
+          props.showComp('special')
+        }
+        }>National Geographic</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("new-scientist")
+          props.showComp('special')
+        }
+        }>New Scientist</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("next-big-future")
+          props.showComp('special')
+        }
+        }>Next Big Future</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("polygon")
+          props.showComp('special')
+        }
+        }>Polygon</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("reddit-r-all")
+          props.showComp('special')
+        }}>Reddit</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("t3n")
+          props.showComp('special')
+        }}>T3n</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("the-verge")
+          props.showComp('special')
+        }}>The Verge</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("vice-news")
+          props.showComp('special')
+        }
+        }>Vice News</a>
+          <a class="dropdown-item" onClick={()=> {
+          props.changeSpecialNews("wired")
+          props.showComp('special')
+        }}>Wired</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Stocks</a>
+        <a class="nav-link" href="#" onClick={()=>{
+            
+            props.showComp('stock')}}>Stocks</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Weather</a>
+        <a class="nav-link" href="#" onClick={()=>{
+            
+            props.showComp('weather')}}>Weather</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Clock</a>
+        <a class="nav-link" href="#"onClick={()=>{
+            
+            props.showComp('clock')}}>Clock</a>
       </li>
     </ul>
     {/* <form class="form-inline my-2 my-lg-0">

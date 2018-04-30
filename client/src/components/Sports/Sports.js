@@ -31,6 +31,11 @@ componentDidMount() {
 componentWillReceiveProps(nextProps) {
 // console.log("nextProps: " , nextProps);
   this.getNews(nextProps);
+  if (this.props.showSportsComp === true) {
+    this.setState({
+      showWidgit: true
+    })
+  }
 }
 
 getNews = data => {
@@ -49,12 +54,12 @@ getNews = data => {
     }
   )
 }
-
-  clickExit() {
-    this.setState({
-      showWidgit: false
-    })
-  }
+clickExit() {
+  this.setState({
+    showWidgit: false
+  })
+  this.props.resetSportsComp();
+}
 
   render() {
     console.log("this.state.articles: " + this.state.articles);
