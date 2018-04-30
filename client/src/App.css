@@ -27,13 +27,17 @@ body {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
+  background-image: url("./paper-light.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-header {
-  background-image: url("./fridge-metal-light.jpg") !important;
-  background-position: 0 10% !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-body {
@@ -43,10 +47,6 @@ body {
   left: 0;
   right: 0;
   font-size: 20px;
-  background-image: url("./paper-light.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-title {
@@ -115,24 +115,27 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(32, 109, 90);
+  box-shadow: inset 0 0 5px rgb(94, 104, 101);
   border: 1px solid black;
   border-left: 2px solid black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(192, 255, 229);
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 30%;
   border: 1px solid black;
   border-left: 2px solid black;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(119, 194, 163);
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 40%;
 }
 
 /* Handle on active */
 ::-webkit-scrollbar-thumb:active {
-  background: rgb(32, 109, 90);
+  background-image: url("./fridge-metal-light.jpg");
+  background-position: 0 50%;
 }

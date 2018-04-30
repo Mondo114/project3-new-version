@@ -54,9 +54,9 @@ import './Weather.css';
             </div>
           <div class="card-body weather-body">
             <p id="weather-img"><img src={this.state.icon}/></p>
-            <p><strong>Current Weather:</strong> {this.state.main}</p>
-            <p><strong>Temperature:</strong> {this.state.temp} F</p>
-            <p id="weather-humidity"><strong>Humidity:</strong> {this.state.humidity} %</p>
+            <p><strong>Current Weather:</strong><br/> {this.state.main}</p>
+            <p><strong>Temperature:</strong><br/> {this.state.temp} F</p>
+            <p id="weather-humidity"><strong>Humidity:</strong><br/> {this.state.humidity} %</p>
             </div>
           </div>
           :null}

@@ -147,11 +147,11 @@ componentWillMount() {
                 <Draggable class="col-md-4" type="widget" data="weather"><Weather/></Draggable>
                 <Draggable class="col-md-4" type="widget" data="clock"><Clock/></Draggable>
             
-                <Droppable
+                {/* <Droppable
                     types={["widget"]}  
                     onDrop={this.onDrop.bind(this)}>
                     <div className="col-md-4 test"></div>
-                </Droppable>
+                </Droppable> */}
             </div>
         </div>
     )}
