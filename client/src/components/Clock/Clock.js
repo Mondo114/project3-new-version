@@ -6,7 +6,7 @@ import "./Clock.css";
 class Clock extends React.Component {
   state = {
     clock: [],
-    // showWidgit: true
+    showWidgit: true
   }
 
   constructor(props) {
@@ -21,6 +21,9 @@ class Clock extends React.Component {
       () => this.tick(),
       1000
     );
+    this.setState({
+      showWidgit: true
+    })
   }
 
   componentWillUnmount() {
@@ -33,21 +36,21 @@ class Clock extends React.Component {
     });
   }
 
-  // clickExit() {
-  //   this.setState({
-  //     showWidgit: false
-  //   })
-  // }
+  clickExit() {
+    this.setState({
+      showWidgit: false
+    })
+  }
 
   render() {
     return (
-      // <div>
-      //   {this.state.showWidgit?
+      <div>
+        {this.state.showWidgit?
         <div class="card">
           <div class="card-header clock-header">
-            {/* <div class="x-box" onClick={()=>this.clickExit()}>
+            <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
-            </div> */}
+            </div>
             <h2>Clock</h2>
           </div>
           <div class="card-body">
@@ -59,8 +62,8 @@ class Clock extends React.Component {
             </p>
           </div>
         </div>
-      //   :null}
-      // </div>
+        :null}
+      </div>
     );
   }
 }

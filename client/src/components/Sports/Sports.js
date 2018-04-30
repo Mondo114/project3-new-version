@@ -23,7 +23,7 @@ the-sport-bible
 */
 
 componentDidMount() {
-  this.setState({newsSource: this.props.newsSource})
+  this.setState({newsSource:this.props.newsSource})
   // console.log("this.props.newsSource: " + this.props.newsSource);
   this.getNews(this.props);
 }
