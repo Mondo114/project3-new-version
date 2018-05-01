@@ -39,6 +39,7 @@ usa-today
 componentDidMount() {
   this.setState({newsSource: this.props.newsSource})
   // console.log("this.props.newsSource: " + this.props.newsSource);
+  // dummy code for merge
   this.getNews(this.props);
 }
 
