@@ -2,7 +2,7 @@ import React from "react";
 import "./News.css";
 import axios from "axios";
 
-const APIKEY = "89cfe00e2a89455d86cebbebd6b4c4df";
+const APIKEY = "287abd0f432e43f5aa5f8d91fa9b1663";
 
 class News extends React.Component {
 
