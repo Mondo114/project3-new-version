@@ -8,7 +8,10 @@
  }
  
  body, html {
-  background: white;
+  background-image: url("./fridge-texture-light.jpg");
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
   height: 100%;
   position: relative;
 }

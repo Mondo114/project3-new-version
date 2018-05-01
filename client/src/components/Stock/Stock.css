@@ -28,21 +28,27 @@
   font-size: 30px;
 }
 
-#open-close {
-  display: inline;
-  overflow: auto;
-}
-
-#low-high {
-  display: inline;
-  overflow: auto;
-}
-
 #stock-current {
+  color: rgb(99, 241, 99);
+  -webkit-text-stroke: 1px black;
+  text-align: center;
+  font-size: 30px;
+}
+
+#stock-open {
   display: inline;
 }
 
-#stock-right {
-  float: right;
+#stock-close {
+  margin-left: 130px;
+  display: inline;
+}
+
+#stock-low {
+  display: inline;
+}
+
+#stock-high {
+  margin-left: 130px;
   display: inline;
 }

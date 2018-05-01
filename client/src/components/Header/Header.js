@@ -93,7 +93,7 @@ const Header = (props) => (
         <a class="nav-link" href="#">Clock</a>
       </li>
       <li class="nav-item date-display">
-        <a class="nav-link" href="#">Today's Date:</a>
+        <a class="nav-link">Today's Date: &nbsp; {today}</a>
       </li>
     </ul>
     {/* <form class="form-inline my-2 my-lg-0">
@@ -103,5 +103,19 @@ const Header = (props) => (
   </div>
 </nav>
 );
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd = '0'+ dd
+} 
+if(mm<10) {
+    mm = '0'+ mm
+} 
+today = mm + '/' + dd + '/' + yyyy;
+
 
 export default Header;
