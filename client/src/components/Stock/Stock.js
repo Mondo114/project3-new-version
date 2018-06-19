@@ -20,6 +20,7 @@ class Stock extends React.Component {
     axios.get("https://api.iextrading.com/1.0/stock/market/batch?symbols=ndaq,aapl,googl&types=quote,chart&range=1m&last=5")
       .then(res => {
         const companyName = res.data.NDAQ.quote.companyName;
+        const current = res.data.NDAQ.quote.iexRealtimePrice;
         const open = res.data.NDAQ.quote.open;
         const high = res.data.NDAQ.quote.high;
         const low = res.data.NDAQ.quote.low;
@@ -28,6 +29,7 @@ class Stock extends React.Component {
         if (this.props.showStockComp === true) {
         this.setState({
           companyName: res.data.NDAQ.quote.companyName,
+          current: res.data.NDAQ.quote.iexRealtimePrice,
           open: res.data.NDAQ.quote.open,
           high: res.data.NDAQ.quote.high,
           low: res.data.NDAQ.quote.low,
@@ -59,6 +61,7 @@ class Stock extends React.Component {
           </div>
           <div class="card-body">
               <p id="stock-name"><strong>Nasdaq Inc.</strong></p>
+              <p id="stock-current"><strong>Current Price:</strong> {this.state.current}</p>
             <div id="open-close">
               <p id="stock-open"><strong>Open:</strong> {this.state.open}</p>
               <p id="stock-close"><strong>Close:</strong> {this.state.close}</p>

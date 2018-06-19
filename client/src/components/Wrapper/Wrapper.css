@@ -2,9 +2,9 @@
   min-height: 100%;
   height: 900px;
   padding: 100px;
-  background-image: url("./fridge-texture-light.jpg");
+  background-image: url("./fridge-texture-light.jpg"), url("./fridge-texture-light.jpg");
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x repeat-y;
   background-size: cover;
 }
 

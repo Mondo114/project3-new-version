@@ -17,6 +17,25 @@
   font-size: 45px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(189, 73, 189);
+}
+
+a:not([href]):not([tabindex]) {
+  color: black;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover {
+  color: rgb(189, 73, 189);
+  text-decoration: none;
+  background-color: white;
+}
+
 .letter-f {
   color: yellow;
   margin: 3px;
@@ -75,4 +94,8 @@
 
 .color-me {
   color: blue;
+}
+
+.date-display {
+  margin-left: 250px;
 }

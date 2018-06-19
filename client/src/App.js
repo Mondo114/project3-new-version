@@ -28,7 +28,8 @@ class App extends Component {
   }
   }
 state = { 
-  isLoggedIn: false,
+  // Change next line to false to start with login page
+  isLoggedIn: true,
   newsChoice: "",
   sportsNewsChoice: "",
   specialNewsChoice: "",

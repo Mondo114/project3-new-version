@@ -89,7 +89,7 @@ app.post("/Login", function (req, res) {
           res.json(data.dataValues);
 
       } else {
-          res.send("you suck")
+          res.send("error")
       }
 
   }).catch(function (err) {
