@@ -71,10 +71,10 @@ clickExit() {
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
-            <h2>Sports</h2>
+            <h2 class="widgit-title">Sports</h2>
           </div>
           
-          <div class="card-body">
+          <div class="card-body sports-body">
           
           <p><strong>{this.state.sourceName}</strong></p>
 

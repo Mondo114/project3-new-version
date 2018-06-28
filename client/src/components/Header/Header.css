@@ -33,7 +33,6 @@ a:not([href]):not([tabindex]) {
 a:not([href]):not([tabindex]):hover {
   color: rgb(189, 73, 189);
   text-decoration: none;
-  background-color: white;
 }
 
 .letter-f {
@@ -97,5 +96,20 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .date-display {
-  margin-left: 250px;
+  list-style: none;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1360px) {
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .date-display {
+    margin-left: 100px;
+  }
 }

@@ -7,13 +7,13 @@
   box-sizing: border-box;
  }
  
- body, html {
+ body {
   background-image: url("./fridge-texture-light.jpg");
   background-position: center center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
 body {
@@ -30,10 +30,6 @@ body {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
-  background-image: url("./paper-light.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-header {
@@ -97,7 +93,7 @@ body {
   width: 40px;
   height: 40px;
   text-align: center;
-  background-color: rgb(200, 200, 200);
+  background-color: white;
   border-radius: 2px;
   border: 1px solid black;
   transform: scale(0.8, 0.8);
@@ -141,4 +137,13 @@ body {
 ::-webkit-scrollbar-thumb:active {
   background-image: url("./fridge-metal-light.jpg");
   background-position: 0 50%;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1360px) {
+  .widgit-title {
+    font-size: 25px;
+  }
 }

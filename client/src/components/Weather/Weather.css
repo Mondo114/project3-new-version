@@ -35,3 +35,7 @@ p img {
 #weather-img {
   text-align: center;
 }
+
+.weather-body {
+  background-color: rgb(178, 186, 250);
+}

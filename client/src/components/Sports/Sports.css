@@ -22,3 +22,7 @@
   -webkit-text-stroke: 2px black;
   border-bottom: 2px solid black;
 }
+
+.sports-body {
+  background-color: rgb(255, 255, 182);
+}

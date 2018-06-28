@@ -34,3 +34,7 @@
   color: red;
   border-radius: 5px;
 }
+
+.clock-body {
+  background-color: rgb(255, 160, 160);
+}

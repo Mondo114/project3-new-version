@@ -22,3 +22,7 @@
     -webkit-text-stroke: 2px black;
     border-bottom: 2px solid black;
 }
+
+.special-body {
+  background-color: rgb(180, 243, 171);
+}

@@ -52,3 +52,7 @@
   margin-left: 130px;
   display: inline;
 }
+
+.stock-body {
+  background-color: rgb(255, 228, 177);
+}

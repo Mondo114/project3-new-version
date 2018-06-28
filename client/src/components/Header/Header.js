@@ -269,10 +269,11 @@ const Header = (props) => (
             
             props.showComp('clock')}}>Clock</a>
       </li>
-      <li class="nav-item date-display">
+      
+    </ul>
+    <li class="nav-item date-display">
         <a class="nav-link">Today's Date: &nbsp; {today}</a>
       </li>
-    </ul>
     {/* <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -286,10 +287,10 @@ var dd = today.getDate();
 var mm = today.getMonth() + 1; //January is 0!
 var yyyy = today.getFullYear();
 
-if(dd<10) {
+if (dd < 10) {
     dd = '0'+ dd
 } 
-if(mm<10) {
+if (mm < 10) {
     mm = '0'+ mm
 } 
 today = mm + '/' + dd + '/' + yyyy;

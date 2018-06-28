@@ -86,10 +86,10 @@ getNews = data => {
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
-            <h2>News</h2>
+            <h2 class="widgit-title">News</h2>
           </div>
           
-          <div class="card-body">
+          <div class="card-body news-body">
           
           <p><strong>{this.state.sourceName}</strong></p>
 

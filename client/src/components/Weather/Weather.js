@@ -52,7 +52,7 @@ import './Weather.css';
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
-              <h2>Weather</h2>
+              <h2 class="widgit-title">Weather</h2>
             </div>
           <div class="card-body weather-body">
             <p id="weather-img"><img src={this.state.icon}/></p>

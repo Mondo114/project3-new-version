@@ -57,9 +57,9 @@ class Stock extends React.Component {
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
-            <h2>Stocks</h2>
+            <h2 class="widgit-title">Stocks</h2>
           </div>
-          <div class="card-body">
+          <div class="card-body stock-body">
               <p id="stock-name"><strong>Nasdaq, Inc.</strong></p>
               <p id="stock-current"><strong>Current Price:</strong> {this.state.current}</p>
             <div id="open-close">
