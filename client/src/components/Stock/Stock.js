@@ -52,24 +52,32 @@ class Stock extends React.Component {
     return (
       <div>
         {this.state.showWidgit?
-        <div class="card">
+        <div class="card stock-body">
           <div class="card-header stock-header">
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
             <h2 class="widgit-title">Stocks</h2>
           </div>
-          <div class="card-body stock-body">
+          <div class="card-body">
               <p id="stock-name"><strong>Nasdaq, Inc.</strong></p>
               <p id="stock-current"><strong>Current Price:</strong> {this.state.current}</p>
-            <div id="open-close">
-              <p id="stock-open"><strong>Open:</strong> {this.state.open}</p>
-              <p id="stock-close"><strong>Close:</strong> {this.state.close}</p>
-            </div>
-            <div id="low-high">
-              <p id="stock-low"><strong>Low:</strong> {this.state.low}</p>
-              <p id="stock-high"><strong>High:</strong> {this.state.high}</p>
-            </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <p id="price-title"><strong>Open:</strong> {this.state.open}</p>
+                </div>
+                <div class="col-lg-6">
+                  <p id="price-title"><strong>Close:</strong> {this.state.close}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <p id="price-title"><strong>Low:</strong> {this.state.low}</p>
+                </div>
+                <div class="col-lg-6">
+                  <p id="price-title"><strong>High:</strong> {this.state.high}</p>
+                </div>
+              </div>
           </div>
         </div>
         :null}

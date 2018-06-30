@@ -6,19 +6,22 @@
  *:after {
   box-sizing: border-box;
  }
+
+ html, body {
+   /* height: 100%; */
+ }
+
+ html {
+   border-bottom: 2px solid black;
+ }
  
  body {
   background-image: url("./fridge-texture-light.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  /* position: relative; */
-}
-
-body {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  margin-bottom: 50px;
   font-family: sans-serif;
 }
 
@@ -26,7 +29,6 @@ body {
   margin-top: 60px;
   min-height: 300px;
   max-height: 500px;
-  overflow: auto;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 0 6px 20px 0 rgba(0,0,0,0.8);
@@ -41,11 +43,12 @@ body {
 
 .card-body {
   /* position: absolute; */
-  height: 250px;
+  height: 260px;
   bottom: 0;
   left: 0;
   right: 0;
   font-size: 20px;
+  overflow: auto;
 }
 
 .card-title {

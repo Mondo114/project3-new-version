@@ -29,7 +29,9 @@
 
 p img {
   width: 150px;
-  float: right;
+  top: 80px;
+  right: 20px;
+  position: absolute;
 }
 
 #weather-img {

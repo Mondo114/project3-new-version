@@ -7,10 +7,9 @@
   height: 50px;
   color: black;
   text-align: center;
-  border-top: 2px solid black;
-  background-image: url("./fridge-metal-light.jpg");
+  /* border-top: 2px solid black; */
+  /* background-image: url("./fridge-metal-light.jpg");
   background-position: 0 10%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
-

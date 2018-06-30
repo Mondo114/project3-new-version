@@ -165,7 +165,7 @@ resetClockComp = () => {
 
       <div>
         <Header showComp={this.showComp} changeNews={this.changeNews} changeSportsNews={this.changeSportsNews} changeSpecialNews={this.changeSpecialNews}/>
-        <div id="meat">
+        <div>
           {this.Greeting(this.state.isLoggedIn)}
         </div>
         <Footer />

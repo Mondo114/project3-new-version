@@ -76,7 +76,7 @@ getNews = data => {
     return (
       <div>
         {this.state.showWidgit?
-        <div class="card">
+        <div class="card special-body">
           <div class="card-header special-header">
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
@@ -84,7 +84,7 @@ getNews = data => {
             <h2 class="widgit-title">Special Interest</h2>
           </div>
           
-          <div class="card-body special-body">
+          <div class="card-body">
           
           <p><strong>{this.state.sourceName}</strong></p>
 

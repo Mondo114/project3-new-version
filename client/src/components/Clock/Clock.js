@@ -62,14 +62,14 @@ class Clock extends React.Component {
     return (
       <div>
         {this.state.showWidgit?
-        <div class="card">
+        <div class="card clock-body">
           <div class="card-header clock-header">
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
             <h2 class="widgit-title">Clock</h2>
           </div>
-          <div class="card-body clock-body">
+          <div class="card-body">
             <p id="clock-display-title">
               <strong>{this.state.time}</strong>
             </p>

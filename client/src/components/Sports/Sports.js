@@ -66,7 +66,7 @@ clickExit() {
     return (
       <div>
         {this.state.showWidgit?
-        <div class="card">
+        <div class="card sports-body">
           <div class="card-header sports-header">
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
@@ -74,7 +74,7 @@ clickExit() {
             <h2 class="widgit-title">Sports</h2>
           </div>
           
-          <div class="card-body sports-body">
+          <div class="card-body">
           
           <p><strong>{this.state.sourceName}</strong></p>
 

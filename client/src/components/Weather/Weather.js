@@ -47,14 +47,14 @@ import './Weather.css';
     return (
       <div>
         {this.state.showWidgit?
-          <div class="card">
+          <div class="card weather-body">
             <div class="card-header weather-header">
             <div class="x-box" onClick={()=>this.clickExit()}>
               <p class="x-letter">x</p>
             </div>
               <h2 class="widgit-title">Weather</h2>
             </div>
-          <div class="card-body weather-body">
+          <div class="card-body">
             <p id="weather-img"><img src={this.state.icon}/></p>
             <p><strong>Current Weather:</strong><br/> {this.state.main}</p>
             <p><strong>Temperature:</strong><br/> {this.state.temp} F</p>

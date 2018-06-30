@@ -35,24 +35,10 @@
   font-size: 30px;
 }
 
-#stock-open {
-  display: inline;
-}
-
-#stock-close {
-  margin-left: 130px;
-  display: inline;
-}
-
-#stock-low {
-  display: inline;
-}
-
-#stock-high {
-  margin-left: 130px;
-  display: inline;
-}
-
 .stock-body {
   background-color: rgb(255, 228, 177);
+}
+
+#price-title {
+  text-align: center;
 }

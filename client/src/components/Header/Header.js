@@ -18,6 +18,9 @@ const Header = (props) => (
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item date-display">
+        <a class="nav-link today-date">Today's Date: &nbsp; {today}</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           News
@@ -271,15 +274,14 @@ const Header = (props) => (
       </li>
       
     </ul>
-    <li class="nav-item date-display">
-        <a class="nav-link">Today's Date: &nbsp; {today}</a>
-      </li>
+
     {/* <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> */}
   </div>
 </nav>
+
 );
 
 var today = new Date();
@@ -295,5 +297,10 @@ if (mm < 10) {
 } 
 today = mm + '/' + dd + '/' + yyyy;
 
+// $('.navbar-toggler').on('click', function(){
+//   var padding = $('.wrapper').css('padding-top');
+//   var newPadding = (padding=='20px')?'40px':'20px';
+//   $('.wrapper').css('padding-top',newPadding);
+// })
 
 export default Header;
