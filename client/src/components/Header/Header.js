@@ -16,8 +16,8 @@ const Header = (props) => (
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
       <li class="nav-item date-display">
         <a class="nav-link today-date">Today's Date: &nbsp; {today}</a>
       </li>
@@ -259,17 +259,14 @@ const Header = (props) => (
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" onClick={()=>{
-            
             props.showComp('stock')}}>Stocks</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" onClick={()=>{
-            
             props.showComp('weather')}}>Weather</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"onClick={()=>{
-            
+        <a class="nav-link" href="#" onClick={()=>{
             props.showComp('clock')}}>Clock</a>
       </li>
       

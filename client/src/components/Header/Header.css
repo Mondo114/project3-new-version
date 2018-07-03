@@ -119,6 +119,12 @@ a:not([href]):not([tabindex]):hover {
 }
 
 @media only screen and (max-width: 992px) {
+  .navbar {
+    height: 80px;
+  }
+  .navbar-toggler {
+    display: none;
+  }
   .date-display {
     margin-left: 0;
     padding: 0 !important;
