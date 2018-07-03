@@ -129,4 +129,12 @@ a:not([href]):not([tabindex]):hover {
     margin-left: 0;
     padding: 0 !important;
   }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: black;
+  }
+  
+  a:not([href]):not([tabindex]):hover {
+    color: black;
+    text-decoration: none;
+  }
 }
